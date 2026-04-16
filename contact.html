@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get in touch — Lily Eastwood</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <nav>
+    <a href="index.html" class="nav-logo">Lily Eastwood</a>
+    <ul>
+      <li><a href="work.html">Work</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" class="nav-cta">Get in touch</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <section class="page-hero">
+      <p class="hero-eyebrow">Get in touch</p>
+      <h1>Let's find <em>the piece that matters.</em></h1>
+      <p class="page-intro">Whether you've got a specific project in mind or just a nagging sense that your data could be working harder — I'd love to hear about it.</p>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-inner">
+        <div class="contact-form-wrap">
+          <form id="contact-form" action="mailto:lily@lilyeastwood.com" method="GET">
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+            </div>
+            <div class="form-group">
+              <label for="email">Your email</label>
+              <input type="email" id="email" name="email" placeholder="jane@organisation.org" required />
+            </div>
+            <div class="form-group">
+              <label for="org">Organisation <span class="optional">(optional)</span></label>
+              <input type="text" id="org" name="org" placeholder="Your charity or company" />
+            </div>
+            <div class="form-group">
+              <label for="message">What's on your mind?</label>
+              <textarea id="message" name="body" rows="6" placeholder="Tell me about the problem you're trying to solve — as much or as little as you like." required></textarea>
+            </div>
+            <button type="submit" class="btn-primary">Send message</button>
+          </form>
+        </div>
+
+        <div class="contact-aside">
+          <div class="contact-detail">
+            <span class="contact-detail-label">Email</span>
+            <a href="mailto:lily@lilyeastwood.com">lily@lilyeastwood.com</a>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">LinkedIn</span>
+            <a href="https://www.linkedin.com/in/lily-eastwood/" target="_blank">lily-eastwood</a>
+          </div>
+          <div class="contact-detail">
+            <span class="contact-detail-label">GitHub</span>
+            <a href="https://github.com/LilyEastwood" target="_blank">LilyEastwood</a>
+          </div>
+          <div class="contact-note">
+            <p>I typically respond within a couple of days. If you'd prefer to just send an email directly, that works too.</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span class="footer-name">Lily Eastwood</span>
+      <span class="footer-email"><a href="mailto:lily@lilyeastwood.com">lily@lilyeastwood.com</a></span>
+      <span class="footer-links">
+        <a href="https://github.com/LilyEastwood" target="_blank">GitHub</a>
+        <a href="https://www.linkedin.com/in/lily-eastwood/" target="_blank">LinkedIn</a>
+      </span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
