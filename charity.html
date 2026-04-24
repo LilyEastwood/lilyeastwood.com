@@ -24,9 +24,11 @@
   <main>
 
     <section class="page-hero">
-      <p class="hero-eyebrow">Charity services</p>
-      <h1>Impact and evaluation support <em>that gets used.</em></h1>
-      <p class="page-intro">Whether you're building an evaluation framework from scratch or trying to make sense of data you already have, I can help you find the approach that's realistic for your context and genuinely useful to your team.</p>
+      <div class="page-hero-inner">
+        <p class="hero-eyebrow">Charity services</p>
+        <h1>For charities and mission-driven organisations</h1>
+        <p class="page-intro">Focus on the foundational elements that will impact your work beyond the borders of the nicely designed pdf they sit on.</p>
+      </div>
     </section>
 
     <section class="services-section">
@@ -34,50 +36,59 @@
 
         <div class="service-block">
           <div class="service-block-header">
-            <div class="service-tag">Impact & evaluation</div>
-            <h2>For charities and mission-driven organisations</h2>
-            <p>Support that brings together strategic clarity, credible evidence and practical delivery. The aim is not to produce a document that sits on a shelf, but something your team can actually work with.</p>
+            <div class="service-tag">Impact projects with impact</div>
           </div>
-          <div class="service-items">
+          <p class="service-outcomes-kicker">Your solution will be</p>
+          <div class="service-items service-items--outcomes">
             <div class="service-item">
-              <h3>Theory of Change</h3>
-              <p>A concise, useful articulation of your work, built with your team and embedded across delivery, reporting and communication.</p>
+              <h3><strong>Well evidenced</strong> <em>and</em> highly useable</h3>
             </div>
             <div class="service-item">
-              <h3>Evaluation framework</h3>
-              <p>Well-defined, achievable evaluation activities that translate into clear and credible reporting, designed around your actual context and capacity.</p>
+              <h3><strong>Understood and owned</strong> by your team <em>and</em> supported by expert delivery</h3>
             </div>
             <div class="service-item">
-              <h3>Insights & data landscape</h3>
-              <p>Accessible insight work to help you course-check on impact, from mapping what data you have to identifying what needs to change.</p>
+              <h3><strong>Creating impact now</strong> <em>and</em> designed to grow and adapt</h3>
             </div>
           </div>
 
-          <div class="pdf-capture">
-            <p class="pdf-capture-text">Want the full menu, including package options and what each engagement involves?</p>
-            <div class="pdf-form">
-              <input type="email" id="pdf-email" placeholder="your@email.com" />
-              <a id="pdf-send" href="#" class="btn-primary">Send me the menu</a>
+          <div class="pdf-capture pdf-capture--wide">
+            <p class="pdf-capture-text">Great value off-the-shelf packages for foundational elements:</p>
+            <div class="service-items">
+              <div class="service-item">
+                <h3>Theory of Change</h3>
+                <p>A purposeful articulation of your work, built with your team and embedded across delivery, reporting and communication.</p>
+              </div>
+              <div class="service-item">
+                <h3>Evaluation framework</h3>
+                <p>Well-defined, achievable evaluation activities that translate into clear and credible reporting.</p>
+              </div>
+              <div class="service-item">
+                <h3>Data landscape and action plan</h3>
+                <p>Understand what you have, what you need, and the practical steps to improve it.</p>
+              </div>
             </div>
-            <p class="pdf-small">I'll send it over personally — no automation, no mailing list.</p>
           </div>
-        </div>
 
-        <div class="service-divider">
-          <div class="service-divider-inner">
-            <h2>Looking for technical delivery too?</h2>
-            <p>If your evaluation work depends on stronger data systems, better reporting infrastructure or hands-on technical build, there’s a dedicated technical services page as well.</p>
-            <a href="technical.html" class="btn-secondary">See technical services</a>
+          <div class="service-divider">
+            <div class="service-divider-inner">
+              <h2>Get the full menu of packages</h2>
+              <p class="pdf-small">I'll send it over personally — no automation, no mailing list.</p>
+              <div class="pdf-form">
+                <input type="email" id="pdf-email" placeholder="your@email.com" />
+                <a id="pdf-send" href="#" class="btn-primary">Send me the menu</a>
+              </div>
+              <div class="service-next-links">
+                <span>Need something more bespoke?</span>
+                <a href="contact.html">Let's talk</a>
+                <span class="service-next-divider" aria-hidden="true">•</span>
+                <span>Need something more technical?</span>
+                <a href="technical.html">Go here</a>
+              </div>
+            </div>
           </div>
         </div>
 
       </div>
-    </section>
-
-    <section class="cta-section">
-      <h2>Want to talk through your charity's needs?</h2>
-      <p>Tell me where things feel unclear, underused or too complicated, and we can work out the right next step.</p>
-      <a href="contact.html" class="btn-primary">Let's talk</a>
     </section>
 
   </main>
@@ -95,15 +106,18 @@
 
   <script src="js/main.js"></script>
   <script>
-    document.getElementById('pdf-send').addEventListener('click', function(e) {
-      e.preventDefault();
-      const email = document.getElementById('pdf-email').value;
-      if (!email || !email.includes('@')) {
-        alert('Please enter a valid email address.');
-        return;
-      }
-      window.location.href = 'mailto:lily@lilyeastwood.com?subject=Charity services menu request&body=Please send me the charity services menu. My email is: ' + email;
-    });
+    const pdfSend = document.getElementById('pdf-send');
+    if (pdfSend) {
+      pdfSend.addEventListener('click', function(e) {
+        e.preventDefault();
+        const email = document.getElementById('pdf-email')?.value;
+        if (!email || !email.includes('@')) {
+          alert('Please enter a valid email address.');
+          return;
+        }
+        window.location.href = 'mailto:lily@lilyeastwood.com?subject=Charity services menu request&body=Please send me the charity services menu. My email is: ' + email;
+      });
+    }
   </script>
 </body>
 </html>
