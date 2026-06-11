@@ -708,6 +708,9 @@
     --sc-purple: #9333EA;
     --sc-purple-lt: #F5F0FF;
     --sc-ink: #1A1A2E;
+    --font-head: 'Fredoka', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    font-family: var(--font-body);
     /* legacy aliases used in class names */
     --sc-coral: var(--sc-pink);
     --sc-coral-lt: var(--sc-pink-lt);
@@ -716,10 +719,15 @@
     --sc-sun: var(--sc-yellow);
     --sc-sun-lt: var(--sc-yellow-lt);
   }
+  .story-club h1,
+  .story-club h2,
+  .story-club h3 {
+    letter-spacing: 0.01em;
+  }
 
   .sc-banner {
     background: var(--white);
-    padding: var(--space-md) var(--space-md) var(--space-sm);
+    padding: var(--space-md) var(--space-md) 0.25rem;
   }
   .sc-banner img {
     width: 100%;
@@ -732,7 +740,7 @@
 
   .sc-hero {
     background: var(--white);
-    padding: var(--space-md) var(--space-md) var(--space-lg);
+    padding: 1rem var(--space-md) var(--space-lg);
     border-bottom: 1px solid var(--border);
   }
   .sc-hero-inner {
@@ -743,9 +751,9 @@
   .sc-hero h1 {
     font-family: var(--font-head);
     font-size: clamp(2rem, 4.5vw, 3.2rem);
-    font-weight: 600;
-    line-height: 1.12;
-    letter-spacing: -0.02em;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: 0.01em;
     margin-bottom: 0.8rem;
     color: var(--sc-ink);
     max-width: 640px;
@@ -753,7 +761,7 @@
     margin-right: auto;
   }
   .sc-hero h1 em {
-    font-style: italic;
+    font-style: normal;
     color: var(--sc-pink);
   }
   .sc-hero-sub {
@@ -1097,7 +1105,7 @@
     font-family: var(--font-head);
     font-size: 1.15rem !important;
     font-weight: 600;
-    font-style: italic;
+    font-style: normal;
     color: var(--sc-blue) !important;
     padding-left: 1rem;
     border-left: 4px solid var(--sc-pink);
@@ -1120,16 +1128,16 @@
     border: none;
   }
   .sc-quote p {
-    font-family: var(--font-head);
+    font-family: var(--font-body);
     font-style: italic;
     font-weight: 600;
-    line-height: 1.35;
+    line-height: 1.4;
     color: var(--white);
     margin: 0;
   }
   .sc-quote--lead p {
-    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
-    letter-spacing: -0.02em;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
+    letter-spacing: 0;
   }
   .sc-quote:not(.sc-quote--lead) p {
     font-size: clamp(1.2rem, 2.5vw, 1.6rem);
