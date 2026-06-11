@@ -695,66 +695,79 @@
   }
 
   /* ── Story Club (standalone page) ── */
+  /* Palette drawn from storyclubbanner.jpg */
   .story-club {
-    --sc-coral: #FF5C5C;
-    --sc-coral-lt: #FFF0F0;
-    --sc-teal: #1CB5A3;
-    --sc-teal-lt: #E8FAF7;
-    --sc-sun: #FFB830;
-    --sc-sun-lt: #FFF8EB;
-    --sc-purple: #7B2D8E;
-    --sc-purple-lt: #F3E8F6;
-    --sc-ink: #1A1025;
+    --sc-pink: #E84393;
+    --sc-pink-lt: #FDF0F6;
+    --sc-blue: #3B82F6;
+    --sc-blue-lt: #EFF6FF;
+    --sc-yellow: #F5C518;
+    --sc-yellow-lt: #FEF9E7;
+    --sc-green: #6BCB4A;
+    --sc-green-lt: #F0FAEB;
+    --sc-purple: #9333EA;
+    --sc-purple-lt: #F5F0FF;
+    --sc-ink: #1A1A2E;
+    /* legacy aliases used in class names */
+    --sc-coral: var(--sc-pink);
+    --sc-coral-lt: var(--sc-pink-lt);
+    --sc-teal: var(--sc-blue);
+    --sc-teal-lt: var(--sc-blue-lt);
+    --sc-sun: var(--sc-yellow);
+    --sc-sun-lt: var(--sc-yellow-lt);
   }
 
-  .sc-header {
-    background: var(--sc-ink);
-    padding: 1.25rem var(--space-md);
+  .sc-banner {
+    background: var(--white);
+    padding: var(--space-md) var(--space-md) 0;
   }
-  .sc-logo {
-    display: block;
-    max-width: var(--max-w);
+  .sc-banner img {
+    width: 100%;
+    max-width: 900px;
+    height: auto;
+    max-height: 220px;
+    object-fit: contain;
     margin: 0 auto;
-    font-family: var(--font-head);
-    font-size: 1.4rem;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    color: var(--sc-sun);
   }
 
   .sc-hero {
-    background: linear-gradient(135deg, var(--sc-purple) 0%, var(--sc-coral) 55%, var(--sc-sun) 100%);
-    padding: var(--space-xl) var(--space-md);
+    background: var(--white);
+    padding: var(--space-md) var(--space-md) var(--space-lg);
+    border-bottom: 1px solid var(--border);
   }
   .sc-hero-inner {
     max-width: var(--max-w);
     margin: 0 auto;
+    text-align: center;
   }
   .sc-hero h1 {
     font-family: var(--font-head);
-    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-size: clamp(2rem, 4.5vw, 3.2rem);
     font-weight: 600;
-    line-height: 1.08;
-    letter-spacing: -0.03em;
-    margin-bottom: 1.2rem;
-    color: var(--white);
-    max-width: 720px;
+    line-height: 1.12;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.8rem;
+    color: var(--sc-ink);
+    max-width: 640px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .sc-hero h1 em {
     font-style: italic;
-    color: var(--sc-sun);
+    color: var(--sc-pink);
   }
   .sc-hero-sub {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: rgba(255,255,255,0.9);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--text-muted);
     max-width: 480px;
     line-height: 1.6;
+    margin: 0 auto;
   }
 
   .sc-booking {
-    background: var(--sc-teal-lt);
-    border-bottom: 3px solid var(--sc-teal);
+    background: var(--sc-green-lt);
+    border-bottom: 3px solid var(--sc-green);
     padding: var(--space-md);
   }
   .sc-booking-inner {
@@ -775,7 +788,7 @@
     gap: 1.5rem;
     flex-wrap: wrap;
     background: var(--white);
-    border: 2px solid var(--sc-teal);
+    border: 2px solid var(--sc-green);
     border-radius: 12px;
     padding: 1.5rem 1.8rem;
     margin-bottom: 1rem;
@@ -784,7 +797,7 @@
     font-size: 0.72rem;
     text-transform: uppercase;
     letter-spacing: 0.12em;
-    color: var(--sc-teal);
+    color: var(--sc-green);
     font-weight: 600;
     margin-bottom: 0.3rem;
   }
@@ -808,19 +821,19 @@
     line-height: 1.6;
   }
   .sc-booking-note a {
-    color: var(--sc-purple);
+    color: var(--sc-blue);
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
-  .sc-booking-note a:hover { color: var(--sc-coral); }
+  .sc-booking-note a:hover { color: var(--sc-pink); }
   .sc-badge {
     display: inline-block;
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    background: var(--sc-sun-lt);
-    color: #B87800;
+    background: var(--sc-yellow-lt);
+    color: #92680A;
     padding: 2px 8px;
     border-radius: 100px;
     margin-left: 0.35rem;
@@ -843,10 +856,10 @@
   }
   .sc-btn--white {
     background: var(--white);
-    color: var(--sc-purple);
+    color: var(--sc-blue);
   }
   .sc-btn--purple {
-    background: var(--sc-purple);
+    background: var(--sc-pink);
     color: var(--white);
   }
   .sc-btn--outline {
@@ -884,16 +897,16 @@
     border: 2px solid transparent;
   }
   .sc-offering-card--coral {
-    background: var(--sc-coral-lt);
-    border-color: var(--sc-coral);
+    background: var(--sc-pink-lt);
+    border-color: var(--sc-pink);
   }
   .sc-offering-card--teal {
-    background: var(--sc-teal-lt);
-    border-color: var(--sc-teal);
+    background: var(--sc-blue-lt);
+    border-color: var(--sc-blue);
   }
   .sc-offering-card--sun {
-    background: var(--sc-sun-lt);
-    border-color: var(--sc-sun);
+    background: var(--sc-yellow-lt);
+    border-color: var(--sc-yellow);
   }
   .sc-offering-card--muted { opacity: 0.7; }
   .sc-offering-card h3 {
@@ -912,7 +925,7 @@
     font-size: 0.68rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: #B87800;
+    color: #92680A;
     font-weight: 600;
   }
   .sc-offering-list {
@@ -941,7 +954,7 @@
     top: 0;
     font-size: 0.8rem;
     font-weight: 700;
-    color: var(--sc-purple);
+    color: var(--sc-blue);
   }
 
   .sc-code {
@@ -958,9 +971,9 @@
     padding: 1.8rem;
     color: var(--sc-ink);
   }
-  .sc-code-item--coral { background: var(--sc-coral); color: var(--white); }
-  .sc-code-item--purple { background: var(--sc-purple-lt); }
-  .sc-code-item--teal { background: var(--sc-teal); color: var(--white); }
+  .sc-code-item--coral { background: var(--sc-pink); color: var(--white); }
+  .sc-code-item--purple { background: var(--sc-yellow-lt); border: 2px solid var(--sc-yellow); }
+  .sc-code-item--teal { background: var(--sc-blue); color: var(--white); }
   .sc-code-num {
     display: inline-flex;
     align-items: center;
@@ -974,8 +987,8 @@
     margin-bottom: 0.8rem;
   }
   .sc-code-item--purple .sc-code-num {
-    background: var(--sc-purple);
-    color: var(--white);
+    background: var(--sc-yellow);
+    color: var(--sc-ink);
   }
   .sc-code-item h3 {
     font-family: var(--font-head);
@@ -1010,12 +1023,12 @@
     line-height: 1.75;
   }
   .sc-about-inner a {
-    color: var(--sc-purple);
+    color: var(--sc-blue);
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
-  .sc-about-inner a:hover { color: var(--sc-coral); }
+  .sc-about-inner a:hover { color: var(--sc-pink); }
   .sc-thoughts {
     list-style: none;
     counter-reset: thought;
@@ -1029,7 +1042,7 @@
     position: relative;
     color: var(--text-muted);
     line-height: 1.75;
-    background: var(--sc-purple-lt);
+    background: var(--sc-green-lt);
     border-radius: 8px;
   }
   .sc-thoughts li::before {
@@ -1040,7 +1053,7 @@
     top: 1rem;
     width: 1.5rem;
     height: 1.5rem;
-    background: var(--sc-purple);
+    background: var(--sc-green);
     color: var(--white);
     border-radius: 50%;
     font-size: 0.8rem;
@@ -1052,9 +1065,9 @@
   .sc-thoughts strong { color: var(--sc-ink); }
 
   .sc-adventure {
-    background: var(--sc-sun-lt);
-    border-top: 3px solid var(--sc-sun);
-    border-bottom: 3px solid var(--sc-sun);
+    background: var(--sc-yellow-lt);
+    border-top: 3px solid var(--sc-yellow);
+    border-bottom: 3px solid var(--sc-yellow);
   }
   .sc-adventure-inner {
     max-width: 720px;
@@ -1085,13 +1098,13 @@
     font-size: 1.15rem !important;
     font-weight: 600;
     font-style: italic;
-    color: var(--sc-purple) !important;
+    color: var(--sc-blue) !important;
     padding-left: 1rem;
-    border-left: 4px solid var(--sc-coral);
+    border-left: 4px solid var(--sc-pink);
   }
 
   .sc-quotes {
-    background: var(--sc-coral);
+    background: var(--sc-pink);
     padding: var(--space-xl) var(--space-md);
   }
   .sc-quotes-inner {
@@ -1126,9 +1139,9 @@
   }
 
   .sc-keep-in-touch {
-    background: var(--sc-teal-lt);
-    border-top: 3px solid var(--sc-teal);
-    border-bottom: 3px solid var(--sc-teal);
+    background: var(--sc-blue-lt);
+    border-top: 3px solid var(--sc-blue);
+    border-bottom: 3px solid var(--sc-blue);
     padding: var(--space-lg) var(--space-md);
     text-align: center;
   }
@@ -1155,14 +1168,14 @@
     font-size: 0.88rem !important;
   }
   .sc-keep-email a {
-    color: var(--sc-purple);
+    color: var(--sc-blue);
     font-weight: 600;
     text-decoration: underline;
     text-underline-offset: 2px;
   }
 
   .sc-cta {
-    background: var(--sc-purple);
+    background: var(--sc-blue);
     padding: var(--space-lg) var(--space-md) var(--space-xl);
   }
   .sc-cta-inner {
@@ -1195,7 +1208,7 @@
     color: rgba(255,255,255,0.65);
   }
   .sc-cta-email a {
-    color: var(--sc-sun);
+    color: var(--sc-yellow);
     font-weight: 500;
     text-decoration: underline;
     text-underline-offset: 2px;
@@ -1217,7 +1230,7 @@
     text-transform: uppercase;
     letter-spacing: 0.12em;
     font-weight: 600;
-    color: var(--sc-sun);
+    color: var(--sc-yellow);
     margin-bottom: 0.6rem;
   }
   .sc-good-to-know ul {
@@ -1237,11 +1250,11 @@
     content: '·';
     position: absolute;
     left: 0;
-    color: var(--sc-sun);
+    color: var(--sc-yellow);
     font-weight: 700;
   }
   .sc-good-to-know a {
-    color: var(--sc-sun);
+    color: var(--sc-yellow);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -1266,10 +1279,11 @@
     font-weight: 600;
     color: var(--white);
   }
-  .sc-footer a { color: var(--sc-sun); }
+  .sc-footer a { color: var(--sc-yellow); }
   .sc-footer a:hover { opacity: 0.8; }
 
   @media (max-width: 768px) {
+    .sc-banner img { max-height: 160px; }
     .sc-offering-grid { grid-template-columns: 1fr; }
     .sc-code-grid { grid-template-columns: 1fr; }
     .sc-booking-card { flex-direction: column; align-items: flex-start; }
