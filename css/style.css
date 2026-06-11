@@ -719,13 +719,13 @@
 
   .sc-banner {
     background: var(--white);
-    padding: var(--space-md) var(--space-md) 0;
+    padding: var(--space-md) var(--space-md) var(--space-sm);
   }
   .sc-banner img {
     width: 100%;
-    max-width: 900px;
+    max-width: var(--max-w);
     height: auto;
-    max-height: 220px;
+    max-height: 480px;
     object-fit: contain;
     margin: 0 auto;
   }
@@ -1283,7 +1283,7 @@
   .sc-footer a:hover { opacity: 0.8; }
 
   @media (max-width: 768px) {
-    .sc-banner img { max-height: 160px; }
+    .sc-banner img { max-height: 320px; }
     .sc-offering-grid { grid-template-columns: 1fr; }
     .sc-code-grid { grid-template-columns: 1fr; }
     .sc-booking-card { flex-direction: column; align-items: flex-start; }
