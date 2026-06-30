@@ -1297,3 +1297,41 @@
     .sc-booking-card { flex-direction: column; align-items: flex-start; }
     .sc-quote:not(.sc-quote--lead) p { padding-left: 1.2rem; }
   }
+
+  .sc-confirm {
+    padding: 1.25rem var(--space-md) var(--space-xl);
+    text-align: center;
+  }
+  .sc-confirm-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+  .sc-confirm h1 {
+    font-family: var(--font-head);
+    font-size: clamp(1.8rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--sc-ink);
+    margin-bottom: 1rem;
+  }
+  .sc-confirm-lead {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--sc-pink);
+    margin-bottom: 1.25rem;
+    line-height: 1.5;
+  }
+  .sc-confirm-note {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.65;
+    margin-bottom: 2rem;
+  }
+  .sc-confirm-note a {
+    color: var(--sc-blue);
+    font-weight: 600;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+  .sc-confirm-note a:hover { color: var(--sc-pink); }
+  .sc-confirm .sc-btn { margin-top: 0.25rem; }
