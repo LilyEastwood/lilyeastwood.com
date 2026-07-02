@@ -997,8 +997,7 @@
   .sc-code-item {
     position: relative;
     border-radius: 12px;
-    padding: 1.8rem;
-    padding-right: 4.5rem;
+    padding: 2.75rem 5.75rem 1.8rem 1.8rem;
     color: var(--sc-ink);
     overflow: visible;
   }
@@ -1007,8 +1006,8 @@
   .sc-code-item--teal { background: var(--sc-blue); color: var(--white); border: 2px solid var(--sc-blue); }
   .sc-code-icon-bubble {
     position: absolute;
-    top: -1.6rem;
-    right: -1rem;
+    top: -2.5rem;
+    right: -2.5rem;
     width: 10rem;
     height: 10rem;
     background: var(--white);
@@ -1352,7 +1351,8 @@
     .sc-banner img { max-height: 320px; }
     .sc-offering-grid { grid-template-columns: 1fr; }
     .sc-code-grid { grid-template-columns: 1fr; gap: 2.25rem; padding-top: 1rem; }
-    .sc-code-icon-bubble { width: 8.75rem; height: 8.75rem; top: -1.25rem; right: -0.65rem; }
+    .sc-code-item { padding: 2.25rem 5rem 1.8rem 1.8rem; }
+    .sc-code-icon-bubble { width: 8.75rem; height: 8.75rem; top: -2rem; right: -2rem; }
     .sc-booking-card { flex-direction: column; align-items: flex-start; }
     .sc-quote:not(.sc-quote--lead) p { padding-left: 1.2rem; }
   }
