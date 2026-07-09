@@ -829,6 +829,9 @@
     color: var(--sc-ink);
     font-weight: 600;
   }
+  .sc-booking-detail + .sc-booking-detail {
+    margin-top: 0.35rem;
+  }
   .sc-coming-soon {
     list-style: none;
     display: flex;
